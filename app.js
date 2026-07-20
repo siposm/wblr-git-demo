@@ -6,5 +6,9 @@ function addition() {
 
 	let result = calc.add(paramA, paramB)
 
-	console.log(result)
+	let target = document.querySelector("#result")
+	target.textContent = "Result: " + result
+
+	document.querySelector("#param-a").value = ""
+	document.querySelector("#param-b").value = ""
 }
