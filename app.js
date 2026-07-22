@@ -38,3 +38,17 @@ function subtraction() {
 	document.querySelector("#param-a").value = ""
 	document.querySelector("#param-b").value = ""
 }
+
+
+function division() {
+	let paramA = Number(document.querySelector("#param-a").value)
+	let paramB = Number(document.querySelector("#param-b").value)
+
+	let result = calc.div(paramA, paramB)
+
+	let target = document.querySelector("#result")
+	target.textContent = "Result: " + result
+
+	document.querySelector("#param-a").value = ""
+	document.querySelector("#param-b").value = ""
+}
