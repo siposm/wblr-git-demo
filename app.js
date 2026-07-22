@@ -44,7 +44,12 @@ function division() {
 	let paramA = Number(document.querySelector("#param-a").value)
 	let paramB = Number(document.querySelector("#param-b").value)
 
-	let result = calc.div(paramA, paramB)
+	let result = undefined
+	try {
+		result = calc.div(paramA, paramB)
+	} catch (error) {
+		result = error
+	}
 
 	let target = document.querySelector("#result")
 	target.textContent = "Result: " + result
