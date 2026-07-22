@@ -9,6 +9,7 @@ class Calculator {
 		return a * b
 	}
 	div(a, b) {
-		return a / b
+		if (b === 0) return "ERROR"
+		else return a / b
 	}
 }
