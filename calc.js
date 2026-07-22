@@ -8,4 +8,7 @@ class Calculator {
 	mul(x,y){
 return x*y
 	}
+	div(a, b) {
+		return a / b
+	}
 }
