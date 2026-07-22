@@ -5,7 +5,7 @@ class Calculator {
 	sub(a, b) {
 		return a - b
 	}
-	mul(x, y){
-		return x*y
+	mul(a, b){
+		return a * b
 	}
 }
