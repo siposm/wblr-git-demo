@@ -9,8 +9,8 @@ function getParamsFromInput() {
 	let paramA = Number(document.querySelector("#param-a").value)
 	let paramB = Number(document.querySelector("#param-b").value)
 	return {
-		param_a = paramA,
-		param_b = paramB
+		param_a: paramA,
+		param_b: paramB
 	}
 }
 
@@ -36,7 +36,7 @@ function subtraction() {
 	resetInputs()
 }
 
-function subtraction() {
+function multiplication() {
 	let params = getParamsFromInput()
 
 	let result = calc.mul(params.param_a, params.param_b)
@@ -51,9 +51,9 @@ function subtraction() {
 function division() {
 	let params = getParamsFromInput()
 
-	params.param_a rparams.param_b = undefined
+	let result = undefined
 	try {
-		result = calc.div(paramA, paramB)
+		result = calc.div(params.param_a, params.param_b)
 	} catch (error) {
 		result = error
 	}
