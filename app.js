@@ -1,52 +1,59 @@
 let calc = new Calculator()
 
+function resetInputs() {
+	document.querySelector("#param-a").value = ""
+	document.querySelector("#param-b").value = ""
+}
+
+function getParamsFromInput() {
+	let paramA = Number(document.querySelector("#param-a").value)
+	let paramB = Number(document.querySelector("#param-b").value)
+	return {
+		param_a: paramA,
+		param_b: paramB
+	}
+}
+
 function addition() {
-	let paramA = Number(document.querySelector("#param-a").value)
-	let paramB = Number(document.querySelector("#param-b").value)
+	let params = getParamsFromInput()
 
-	let result = calc.add(paramA, paramB)
+	let result = calc.add(params.param_a, params.param_b)
 
 	let target = document.querySelector("#result")
 	target.textContent = "Result: " + result
 
-	document.querySelector("#param-a").value = ""
-	document.querySelector("#param-b").value = ""
+	resetInputs()
 }
 
 function subtraction() {
-	let paramA = Number(document.querySelector("#param-a").value)
-	let paramB = Number(document.querySelector("#param-b").value)
+	let params = getParamsFromInput()
 
-	let result = calc.sub(paramA, paramB)
+	let result = calc.sub(params.param_a, params.param_b)
 
 	let target = document.querySelector("#result")
 	target.textContent = "Result: " + result
 
-	document.querySelector("#param-a").value = ""
-	document.querySelector("#param-b").value = ""
+	resetInputs()
 }
 
-function subtraction() {
-	let paramA = Number(document.querySelector("#param-a").value)
-	let paramB = Number(document.querySelector("#param-b").value)
+function multiplication() {
+	let params = getParamsFromInput()
 
-	let result = calc.mul(paramA, paramB)
+	let result = calc.mul(params.param_a, params.param_b)
 
 	let target = document.querySelector("#result")
 	target.textContent = "Result: " + result
 
-	document.querySelector("#param-a").value = ""
-	document.querySelector("#param-b").value = ""
+	resetInputs()
 }
 
 
 function division() {
-	let paramA = Number(document.querySelector("#param-a").value)
-	let paramB = Number(document.querySelector("#param-b").value)
+	let params = getParamsFromInput()
 
 	let result = undefined
 	try {
-		result = calc.div(paramA, paramB)
+		result = calc.div(params.param_a, params.param_b)
 	} catch (error) {
 		result = error
 	}
@@ -54,6 +61,5 @@ function division() {
 	let target = document.querySelector("#result")
 	target.textContent = "Result: " + result
 
-	document.querySelector("#param-a").value = ""
-	document.querySelector("#param-b").value = ""
+	resetInputs()
 }
