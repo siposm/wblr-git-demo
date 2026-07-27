@@ -1,5 +1,10 @@
 let calc = new Calculator()
 
+function resetInputs() {
+	document.querySelector("#param-a").value = ""
+	document.querySelector("#param-b").value = ""
+}
+
 function addition() {
 	let paramA = Number(document.querySelector("#param-a").value)
 	let paramB = Number(document.querySelector("#param-b").value)
@@ -9,8 +14,7 @@ function addition() {
 	let target = document.querySelector("#result")
 	target.textContent = "Result: " + result
 
-	document.querySelector("#param-a").value = ""
-	document.querySelector("#param-b").value = ""
+	resetInputs()
 }
 
 function subtraction() {
@@ -22,8 +26,7 @@ function subtraction() {
 	let target = document.querySelector("#result")
 	target.textContent = "Result: " + result
 
-	document.querySelector("#param-a").value = ""
-	document.querySelector("#param-b").value = ""
+	resetInputs()
 }
 
 function subtraction() {
@@ -35,8 +38,7 @@ function subtraction() {
 	let target = document.querySelector("#result")
 	target.textContent = "Result: " + result
 
-	document.querySelector("#param-a").value = ""
-	document.querySelector("#param-b").value = ""
+	resetInputs()
 }
 
 
@@ -54,6 +56,5 @@ function division() {
 	let target = document.querySelector("#result")
 	target.textContent = "Result: " + result
 
-	document.querySelector("#param-a").value = ""
-	document.querySelector("#param-b").value = ""
+	resetInputs()
 }
