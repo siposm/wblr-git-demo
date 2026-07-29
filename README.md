@@ -25,10 +25,10 @@ Klónozd le a repository-t (ha esetleg nem lokálba kezdted el) és a következ�
 
 ### TODO
 
-- [ ] branch kezelés
-- [ ] flowk bemutatása
-- [ ] ignore
-- [ ] angular példa
-- [ ] GUI eszközök bemutatása
-- [ ] GH insights
-- [ ] issue kezelés GH-n keresztül
+- [x] branch kezelés
+- [x] flowk bemutatása
+- [x] ignore
+- [x] angular példa
+- [x] GUI eszközök bemutatása
+- [x] GH insights
+- [x] issue kezelés GH-n keresztül
